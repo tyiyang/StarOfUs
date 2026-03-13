@@ -1,26 +1,96 @@
 <svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <style>
-    @media (prefers-color-scheme: light) {
-      .background { fill: black; }
-      .foreground { fill: white; }
-    }
-    @media (prefers-color-scheme: dark) {
-      .background { fill: white; }
-      .foreground { fill: black; }
-    }
-  </style>
-  <g clip-path="url(#clip0_7960_43945)">
-    <rect class="background" width="180" height="180" rx="37" />
-    <g style="transform: scale(95%); transform-origin: center">
-      <path class="foreground"
-        d="M101.141 53H136.632C151.023 53 162.689 64.6662 162.689 79.0573V112.904H148.112V79.0573C148.112 78.7105 148.098 78.3662 148.072 78.0251L112.581 112.898C112.701 112.902 112.821 112.904 112.941 112.904H148.112V126.672H112.941C98.5504 126.672 86.5638 114.891 86.5638 100.5V66.7434H101.141V100.5C101.141 101.15 101.191 101.792 101.289 102.422L137.56 66.7816C137.255 66.7563 136.945 66.7434 136.632 66.7434H101.141V53Z" />
-      <path class="foreground"
-        d="M65.2926 124.136L14 66.7372H34.6355L64.7495 100.436V66.7372H80.1365V118.47C80.1365 126.278 70.4953 129.958 65.2926 124.136Z" />
-    </g>
-  </g>
   <defs>
-    <clipPath id="clip0_7960_43945">
-      <rect width="180" height="180" fill="white" />
-    </clipPath>
+    <!-- 星空背景渐变 -->
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="180" y2="180" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1a0a2e"/>
+      <stop offset="50%" stop-color="#16082a"/>
+      <stop offset="100%" stop-color="#0d0521"/>
+    </linearGradient>
+    <!-- 爱心渐变：紫到粉 -->
+    <linearGradient id="heartGrad" x1="50" y1="45" x2="130" y2="140" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#ec4899"/>
+    </linearGradient>
+    <!-- 星星渐变 -->
+    <linearGradient id="starGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fbbf24"/>
+    </linearGradient>
+    <!-- 爱心发光 -->
+    <filter id="heartGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <!-- 星星发光 -->
+    <filter id="starGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <!-- 小星星发光 -->
+    <filter id="tinyGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
   </defs>
+
+  <!-- 圆角背景 -->
+  <rect width="180" height="180" rx="37" fill="url(#bgGrad)"/>
+
+  <!-- 背景小星星点缀 -->
+  <circle cx="25" cy="28" r="1.2" fill="#e2d5f3" opacity="0.7" filter="url(#tinyGlow)"/>
+  <circle cx="155" cy="22" r="1" fill="#c4b5fd" opacity="0.6" filter="url(#tinyGlow)"/>
+  <circle cx="42" cy="155" r="1.3" fill="#ddd6fe" opacity="0.5" filter="url(#tinyGlow)"/>
+  <circle cx="148" cy="152" r="1" fill="#e2d5f3" opacity="0.6" filter="url(#tinyGlow)"/>
+  <circle cx="20" cy="90" r="0.9" fill="#fef3c7" opacity="0.5" filter="url(#tinyGlow)"/>
+  <circle cx="160" cy="85" r="1.1" fill="#fef3c7" opacity="0.4" filter="url(#tinyGlow)"/>
+  <circle cx="70" cy="18" r="0.8" fill="#c4b5fd" opacity="0.5" filter="url(#tinyGlow)"/>
+  <circle cx="110" cy="165" r="1" fill="#ddd6fe" opacity="0.5" filter="url(#tinyGlow)"/>
+  <circle cx="35" cy="65" r="0.7" fill="#fef3c7" opacity="0.4" filter="url(#tinyGlow)"/>
+  <circle cx="145" cy="115" r="0.8" fill="#e2d5f3" opacity="0.45" filter="url(#tinyGlow)"/>
+
+  <!-- 中心爱心 -->
+  <path d="M90 138
+    C 65 118, 28 95, 28 68
+    C 28 50, 42 38, 59 38
+    C 72 38, 82 46, 90 58
+    C 98 46, 108 38, 121 38
+    C 138 38, 152 50, 152 68
+    C 152 95, 115 118, 90 138Z"
+    fill="url(#heartGrad)" filter="url(#heartGlow)" opacity="0.95"/>
+
+  <!-- 爱心高光 -->
+  <path d="M62 54
+    C 52 56, 42 66, 44 78
+    C 44 68, 52 56, 66 52Z"
+    fill="white" opacity="0.25"/>
+
+  <!-- 主星星（爱心上方） -->
+  <g filter="url(#starGlow)">
+    <path d="M90 10 L93.5 21 L105 24.5 L93.5 28 L90 39 L86.5 28 L75 24.5 L86.5 21Z"
+      fill="url(#starGrad)"/>
+  </g>
+
+  <!-- 左侧小星星 -->
+  <g filter="url(#starGlow)">
+    <path d="M30 42 L32 48 L38 50 L32 52 L30 58 L28 52 L22 50 L28 48Z"
+      fill="#fef3c7" opacity="0.85"/>
+  </g>
+
+  <!-- 右侧小星星 -->
+  <g filter="url(#starGlow)">
+    <path d="M150 42 L152 48 L158 50 L152 52 L150 58 L148 52 L142 50 L148 48Z"
+      fill="#fef3c7" opacity="0.85"/>
+  </g>
+
+  <!-- 左下小星星 -->
+  <g filter="url(#tinyGlow)">
+    <path d="M38 130 L39.5 134 L43.5 135.5 L39.5 137 L38 141 L36.5 137 L32.5 135.5 L36.5 134Z"
+      fill="#c4b5fd" opacity="0.7"/>
+  </g>
+
+  <!-- 右下小星星 -->
+  <g filter="url(#tinyGlow)">
+    <path d="M142 130 L143.5 134 L147.5 135.5 L143.5 137 L142 141 L140.5 137 L136.5 135.5 L140.5 134Z"
+      fill="#c4b5fd" opacity="0.7"/>
+  </g>
 </svg>
