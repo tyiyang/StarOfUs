@@ -15,7 +15,7 @@ const notoSerifSC = Noto_Serif_SC({
 });
 
 export const metadata: Metadata = {
-  title: '我的世界 因你璀璨 | 星空情侣相册',
+  title: '我的世界 因你璀璨',
   description: '记录我们的浪漫瞬间，在星空下永恒绽放',
   generator: 'v0.app',
   icons: {

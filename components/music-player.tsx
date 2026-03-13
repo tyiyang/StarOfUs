@@ -12,11 +12,12 @@ export function MusicPlayer() {
   const audioRef = useRef<HTMLAudioElement>(null)
 
   // A romantic ambient music URL (royalty-free)
-  const musicUrl = 'https://assets.mixkit.co/music/preview/mixkit-sleepy-cat-135.mp3'
+  // const musicUrl = 'https://assets.mixkit.co/music/preview/mixkit-sleepy-cat-135.mp3'
+  const musicUrl = '/mixkit-beautiful-dream-493.mp3'
 
   useEffect(() => {
     if (audioRef.current) {
-      audioRef.current.volume = 0.3
+      audioRef.current.volume = 0.5
       audioRef.current.loop = true
     }
   }, [])
