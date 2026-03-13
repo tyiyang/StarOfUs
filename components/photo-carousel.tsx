@@ -9,77 +9,77 @@ interface Photo {
   url: string
   description: string
 }
-
+const basePath = process.env.NODE_ENV === 'production' ? '/StarOfUs' : ''
 const photos: Photo[] = [
   {
     id: 1,
     // url: 'https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=1200&h=800&fit=crop',
-    url: '/1.jpg',
+    url: `${basePath}/1.jpg`,
     description: '初次相遇，星光闪烁的那一刻'
   },
   {
     id: 2,
-    url: '/2.jpg',
+    url: `${basePath}/2.jpg`,
     description: '携手漫步，每一步都是幸福'
   },
   {
     id: 3,
-    url: '/3.jpg',
+    url: `${basePath}/3.jpg`,
     description: '日落黄昏，你的侧脸最美'
   },
   {
     id: 4,
-    url: '/4.jpg',
+    url: `${basePath}/4.jpg`,
     description: '笑容如阳光，温暖我的心房'
   },
   {
     id: 5,
-    url: '/5.jpg',
+    url: `${basePath}/5.jpg`,
     description: '时光静好，与你共度每一天'
   },
   {
     id: 6,
-    url: '/6.jpg',
+    url: `${basePath}/6.jpg`,
     description: '夜空下的约定，永远在一起'
   },
   {
     id: 7,
-    url: '/7.jpg',
+    url: `${basePath}/7.jpg`,
     description: '手牵手，共度风雨'
   },
   {
     id: 8,
-    url: '/8.jpg',
+    url: `${basePath}/8.jpg`,
     description: '浪漫的瞬间，定格永恒'
   },
   {
     id: 9,
-    url: '/9.jpg',
+    url: `${basePath}/9.jpg`,
     description: '相濡以沫，相伴一生'
   },
   {
     id: 10,
-    url: '/10.jpg',
+    url: `${basePath}/10.jpg`,
     description: '未来的日子，与你一起走过'
   },
   {
     id: 11,
-    url: '/11.jpg',
+    url: `${basePath}/11.jpg`,
     description: '手牵手，共度风雨'
   },
   {
     id: 12,
-    url: '/12.jpg',
+    url: `${basePath}/12.jpg`,
     description: '浪漫的瞬间，定格永恒'
   },
   {
     id: 13,
-    url: '/13.jpg',
+    url: `${basePath}/13.jpg`,
     description: '相濡以沫，相伴一生'
   },
   {
     id: 14,
-    url: '/14.jpg',
+    url: `${basePath}/14.jpg`,
     description: '未来的日子，与你一起走过'
   }
 ]
