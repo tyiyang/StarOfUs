@@ -78,7 +78,7 @@ export function ParticleTitle() {
               y: Math.random() * canvas.height,
               targetX: x,
               targetY: y,
-              size: Math.random() * 2 + 1,
+              size: Math.random() * 2+ 1,
               color: colors[Math.floor(Math.random() * colors.length)],
               speed: Math.random() * 0.03 + 0.02
             })
