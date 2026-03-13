@@ -77,11 +77,6 @@ const photos: Photo[] = [
     url: `${basePath}/13.jpg`,
     description: '相濡以沫，相伴一生'
   },
-  {
-    id: 14,
-    url: `${basePath}/14.jpg`,
-    description: '未来的日子，与你一起走过'
-  }
 ]
 
 export function PhotoCarousel() {
