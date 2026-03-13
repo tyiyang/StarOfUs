@@ -14,72 +14,72 @@ const photos: Photo[] = [
   {
     id: 1,
     // url: 'https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=1200&h=800&fit=crop',
-    url: '/photo/1.jpg',
+    url: '/1.jpg',
     description: '初次相遇，星光闪烁的那一刻'
   },
   {
     id: 2,
-    url: '/photo/2.jpg',
+    url: '/2.jpg',
     description: '携手漫步，每一步都是幸福'
   },
   {
     id: 3,
-    url: '/photo/3.jpg',
+    url: '/3.jpg',
     description: '日落黄昏，你的侧脸最美'
   },
   {
     id: 4,
-    url: '/photo/4.jpg',
+    url: '/4.jpg',
     description: '笑容如阳光，温暖我的心房'
   },
   {
     id: 5,
-    url: '/photo/5.jpg',
+    url: '/5.jpg',
     description: '时光静好，与你共度每一天'
   },
   {
     id: 6,
-    url: '/photo/6.jpg',
+    url: '/6.jpg',
     description: '夜空下的约定，永远在一起'
   },
   {
     id: 7,
-    url: '/photo/7.jpg',
+    url: '/7.jpg',
     description: '手牵手，共度风雨'
   },
   {
     id: 8,
-    url: '/photo/8.jpg',
+    url: '/8.jpg',
     description: '浪漫的瞬间，定格永恒'
   },
   {
     id: 9,
-    url: '/photo/9.jpg',
+    url: '/9.jpg',
     description: '相濡以沫，相伴一生'
   },
   {
     id: 10,
-    url: '/photo/10.jpg',
+    url: '/10.jpg',
     description: '未来的日子，与你一起走过'
   },
   {
     id: 11,
-    url: '/photo/11.jpg',
+    url: '/11.jpg',
     description: '手牵手，共度风雨'
   },
   {
     id: 12,
-    url: '/photo/12.jpg',
+    url: '/12.jpg',
     description: '浪漫的瞬间，定格永恒'
   },
   {
     id: 13,
-    url: '/photo/13.jpg',
+    url: '/13.jpg',
     description: '相濡以沫，相伴一生'
   },
   {
     id: 14,
-    url: '/photo/14.jpg',
+    url: '/14.jpg',
     description: '未来的日子，与你一起走过'
   }
 ]
